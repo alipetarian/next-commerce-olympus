@@ -1,0 +1,24 @@
+{
+  "name": "my-campaigns",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "campaign-init",
+    "start": "campaign-start",
+    "dev": "campaign-dev",
+    "build": "campaign-build",
+    "clone": "campaign-clone",
+    "config": "campaign-config",
+    "compress": "campaign-compress",
+    "compress:preview": "campaign-compress --preview",
+    "migrate": "campaign-migrate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "next-campaign-page-kit": "^0.1.3"
+  }
+}
