@@ -1,1 +1,1 @@
-basePath: '/olympus'
+basePath: '_site/olympus'
