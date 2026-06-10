@@ -2740,10 +2740,16 @@
 
   <!-- Optional page-level scripts -->
   <script>
-    console.log("Next On Code added: ")
-    window.next.on('cart:updated', function (data) {
-      console.log('Cart updated:', data);
-    });
+
+    console.log("Next On Code added:22 ")
+    setTimeout(() => {
+      console.log("Next On Code executed after 2 seconds: ")
+      window.next.on('cart:updated', function (data) {
+        console.log('Cart updated:', data);
+      });
+    }, 4000);
+
+
   </script>
 </body>
 
