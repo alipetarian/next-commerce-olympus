@@ -5,10 +5,10 @@ window.nextReady = window.nextReady || [];
 window.nextConfig = {
   // Required: Your Campaign Cart API key
   apiKey: '3ohFNcyzX6ktg4ZFTKuVkvRwHNCIEVqTZmpA8Hk2',
-  
+
   // Currency behavior when country changes
   currencyBehavior: 'auto', // 'auto' | 'manual'
-  
+
   // Payment and checkout configuration
   paymentConfig: {
     expressCheckout: {
@@ -54,56 +54,56 @@ window.nextConfig = {
 
   // Discount codes configuration
   // discounts: {
-    // Example discount code
-    // SAVE10: {
-    //     code: "SAVE10",
-    //     type: "percentage", // 'percentage' | 'fixed'
-    //     value: 10,
-    //     scope: "order", // 'package' | 'order'
-    //     description: "10% off entire order",
-    //     combinable: true, // Can be combined with other discounts
-    //     // Optional: packageIds: [1, 2], // For package-specific discounts
-    //     // Optional: minOrderValue: 50, // Minimum order value
-    //     // Optional: maxDiscount: 20 // Maximum discount amount
-    // }
+  // Example discount code
+  // SAVE10: {
+  //     code: "SAVE10",
+  //     type: "percentage", // 'percentage' | 'fixed'
+  //     value: 10,
+  //     scope: "order", // 'package' | 'order'
+  //     description: "10% off entire order",
+  //     combinable: true, // Can be combined with other discounts
+  //     // Optional: packageIds: [1, 2], // For package-specific discounts
+  //     // Optional: minOrderValue: 50, // Minimum order value
+  //     // Optional: maxDiscount: 20 // Maximum discount amount
+  // }
   // },
 
   // profiles: {
-    // "regular": {
-    //     name: "Regular Pricing",
-    //     // No mappings needed - uses original package IDs
-    // },
-    
-    // Example: Exit intent save profile
-    // "SAVE_5": {
-    //     name: "Exit Save 5",
-    //     packageMappings: {
-    //         // Original ID -> EXIT PACKAGE ID
-    //         1: 9,
-    //         2: 10,
-    //         3: 11,
-    //         4: 12,
-    //         5: 13,
-    //     }
-    // },
+  // "regular": {
+  //     name: "Regular Pricing",
+  //     // No mappings needed - uses original package IDs
+  // },
+
+  // Example: Exit intent save profile
+  // "SAVE_5": {
+  //     name: "Exit Save 5",
+  //     packageMappings: {
+  //         // Original ID -> EXIT PACKAGE ID
+  //         1: 9,
+  //         2: 10,
+  //         3: 11,
+  //         4: 12,
+  //         5: 13,
+  //     }
+  // },
   // },
 
   // Default profile to use (if not specified, uses "regular")
   // defaultProfile: "regular",
-  
+
   // Analytics providers configuration
-  storeName: 'store-name', // Required for purchase deduplication with NEXT Storefront Meta App
+  storeName: 'ctexperts-store', // Required for purchase deduplication with NEXT Storefront Meta App
   analytics: {
     enabled: true,
     mode: 'auto', // 'auto' | 'manual' | 'disabled'
     providers: {
       // Next Campaign analytics (always enabled if analytics.enabled is true)
       nextCampaign: {
-          enabled: true
+        enabled: true
       },
       // Google Tag Manager
       gtm: {
-        enabled: false,
+        enabled: true,
         settings: {
           containerId: "GTM-XXXXXX",
           dataLayerName: "dataLayer"
@@ -122,8 +122,8 @@ window.nextConfig = {
       rudderstack: {
         enabled: false,
         settings: {
-            // RudderStack configuration is handled by the RudderStack SDK itself
-            // This just enables the adapter
+          // RudderStack configuration is handled by the RudderStack SDK itself
+          // This just enables the adapter
         },
         // Optional: blockedEvents: ["PageView"]
       },
@@ -131,13 +131,13 @@ window.nextConfig = {
       custom: {
         enabled: false,
         settings: {
-            endpoint: "https://your-analytics.com/track",
-            apiKey: "your-api-key"
+          endpoint: "https://your-analytics.com/track",
+          apiKey: "your-api-key"
         }
       }
     }
   },
-  
+
   // UTM parameter transfer (preserve tracking params)
   utmTransfer: {
     enabled: true,
