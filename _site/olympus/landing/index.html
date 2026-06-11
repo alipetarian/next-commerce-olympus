@@ -2741,15 +2741,34 @@
   <!-- Optional page-level scripts -->
   <script>
 
+    window && window.next.on('page_viewed', function (data) {
+      console.log('page_viewed:', data);
+    });
+
+    window && window.next.on('product_added_to_cart', function (data) {
+      console.log('product_added_to_cart:', data);
+    });
+
+    window && window.next.on('product_added_to_cart', function (data) {
+      console.log('product_added_to_cart:', data);
+    });
+
+    window && window.next.on('dl_user_data', function (data) {
+      console.log('dl_user_data:', data);
+    });
+
+    window && window.next.on('dl_user_data', function (data) {
+      console.log('dl_user_data:', data);
+    });
+    ""
+
     console.log("Next On Code added:22 ")
     setTimeout(() => {
       console.log("Next On Code executed after 2 seconds: ")
       window.next.on('cart:updated', function (data) {
         console.log('Cart updated:', data);
       });
-    }, 4000);
-
-
+    }, 500);
   </script>
 </body>
 
