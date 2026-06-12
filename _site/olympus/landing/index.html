@@ -2741,33 +2741,17 @@
   <!-- Optional page-level scripts -->
   <script>
 
-    window && window.next && window.next.on('page_viewed', function (data) {
-      console.log('page_viewed:', data);
-    });
-
-    window && window.next && window.next.on('product_added_to_cart', function (data) {
-      console.log('product_added_to_cart:', data);
-    });
-
-    window && window.next && window.next.on('product_added_to_cart', function (data) {
-      console.log('product_added_to_cart:', data);
-    });
-
-    window && window.next && window.next.on('dl_user_data', function (data) {
-      console.log('dl_user_data:', data);
-    });
-
-    window && window.next && window.next.on('dl_add_to_cart', function (data) {
-      console.log('dl_add_to_cart:', data);
-    });
-
-    console.log("Next On Code added:22 ")
-    setTimeout(() => {
-      console.log("Next On Code executed after 2 seconds: ")
-      window.next.on('cart:updated', function (data) {
-        console.log('Cart updated:', data);
+    console.log('NextCommerce - Checkout Started');
+    window.nextReady = window.nextReady || [];
+    window.nextReady.push(function () {
+      // SDK is ready - window.next is available
+      console.log('NextCommerce - SDK is ready');
+      next.on('checkout:started', (data) => {
+        console.log('Checkout started:', data);
+        // data includes: cart items, totals
       });
-    }, 500);
+    });
+
   </script>
 </body>
 
