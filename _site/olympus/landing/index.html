@@ -2743,7 +2743,7 @@
 
     console.log('NextCommerce - Checkout Started');
     window.nextReady = window.nextReady || [];
-    window.nextReady.push(function () {
+    window.nextReady.push(function (next) {
       // SDK is ready - window.next is available
       console.log('NextCommerce - SDK is ready');
       next.on('checkout:started', (data) => {
