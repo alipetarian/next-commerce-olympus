@@ -99,7 +99,8 @@ window.nextConfig = {
     providers: {
       // Next Campaign analytics (always enabled if analytics.enabled is true)
       nextCampaign: {
-        enabled: true
+        enabled: true,
+        blockedEvents: ['dl_add_to_cart', 'dl_begin_checkout']
       },
       // Google Tag Manager
       gtm: {
@@ -108,6 +109,7 @@ window.nextConfig = {
           containerId: "GTM-XXXXXX",
           dataLayerName: "dataLayer"
         },
+        blockedEvents: ['dl_add_to_cart', 'dl_begin_checkout']
         // Optional: blockedEvents: ["PageView"]
       },
       // Facebook Pixel
