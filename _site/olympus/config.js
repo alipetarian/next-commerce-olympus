@@ -120,6 +120,10 @@ window.nextConfig = {
         },
         // Optional: blockedEvents: ["PageView"]
       },
+      nextDataLayer: {
+        enabled: true,
+        blockedEvents: ['dl_begin_checkout']   // ← add this
+      },
       // RudderStack
       rudderstack: {
         enabled: false,
